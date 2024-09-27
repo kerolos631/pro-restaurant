@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Products Page</title>
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/task.css">
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+        <a href="../index.html">crispy</a>
+        <div class="links">
+          <div class="search">
+              <input type="search" placeholder="search">
+              <i class="fas fa-search"></i>
+          </div>
+                <ul>
+                    <li>
+                        <a href="../index.html">home</a>
+                    </li>
+                    <li>
+                        <a href="../index.html">about</a>
+                    </li>
+                    <li>
+                        <a href="../index.html">offers</a>
+                    </li>
+                    <li>
+                        <a href="../index.html">menu</a>
+                    </li>
+                    <li>
+                        <a href="../index.html">contact</a>
+                    </li>
+                    <li class="cart">
+                        <a href="cart.html">
+                            <i class="fa-sharp-duotone fa-solid fa-cart-shopping"></i></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+<div class="page">
+    <div class="filter">
+        <h3>filter</h3>
+        <ul>
+            <h4>trending-burger</h4>
+                <ul>
+                    <li>
+                        <input type="checkbox" id="beef" value="beef" onchange="ChangeHandler(this)">
+                        <label for="beef">Beef Burger</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="checken" value="chicken" onchange="ChangeHandler(this)">
+                        <label for="checken">chicken Burger</label>
+                    </li>
+                </ul> 
+            <h4>price</h4>
+            <li>
+                <label id="priceLabel" for="price">$0</label>
+                <input type="range" id="priceInp" step="1px" min="0" max="30" value="0">
+            </li>
+        </ul>
+        <ul>
+            <h4>dessert</h4>
+                <ul>
+                    <li>
+                        <input type="checkbox" id="juice" value="juice">
+                        <label for="juice">juice</label>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="menu" id="menu">
+        <div class="container">
+            <h2>trending burgers</h2>
+            <div id="burgersID" class="content">
+                <div class="box" class="beef">
+                    <img src="photo/burger1.jpg" alt="">
+                    <h4>juicy burger</h4>
+                    <p>beefpatty,cheddercheese,grilled onions&tomatos</p>
+                    <div class="price">
+                        <p class="money">$18</p>
+                        <span class="buy">+ add to cart</span>
+                    </div>
+                </div>
+                <div class="box" class="beef">
+                    <img src="photo/burger2.jpg" alt="">
+                    <h4>beef bacon</h4>
+                    <p>bacone,cheddercheese,grilled onions&tomatos</p>
+                    <div class="price">
+                        <p class="money">$20</p>
+                        <span class="buy">+ add to cart</span>
+                    </div>
+                </div>
+                <div class="box" class="beef">
+                    <img src="photo/burger3.jpg" alt="">
+                    <h4>creamy mushroom</h4>
+                    <p>beef patty, cream of mushroom,cheddercheese,grilled onions&tomatos</p>
+                    <div class="price">
+                        <p class="money">$22</p>
+                        <span class="buy">+ add to cart</span>
+                    </div>
+                </div>
+                <div class="box" class="beef">
+                    <img src="photo/burger4.jpg" alt="">
+                    <h4>hawaiian burger</h4>
+                    <p>beef patty,cheddercheese,grilled onions&tomatos,mayo</p>
+                    <div class="price">
+                        <p class="money">$12</p>
+                        <span class="buy">+ add to cart</span>
+                    </div>
+                </div>
+                <div class="box" class="checken">
+                    <img src="photo/burger-5.jpeg" alt="">
+                    <h4>crispy chicken</h4>
+                    <p>crispy chicken, cream of mushroom,cheddercheese,grilled onions&tomatos</p>
+                    <div class="price">
+                        <p class="money">$22</p>
+                        <span class="buy">+ add to cart</span>
+                    </div>
+                </div>
+                <div class="box" class="checken">
+                    <img src="photo/burger1.jpg" alt="">
+                    <h4>BBQ chicken</h4>
+                    <p>grilled chicken, cream of mushroom,cheddercheese,grilled onions&tomatos</p>
+                    <div class="price">
+                        <p class="money">$20</p>
+                        <span class="buy">+ add to cart</span>
+                    </div>
+                </div>
+                <div class="box" class="checken">
+                    <img src="photo/burger4.jpg" alt="">
+                    <h4>spicy chicken</h4>
+                    <p>spicy chicken, cream of mushroom,cheddercheese,grilled onions&tomatos</p>
+                    <div class="price">
+                        <p class="money">$18</p>
+                        <span class="buy">+ add to cart</span>
+                    </div>
+                </div>
+                <div class="box" class="checken">
+                    <img src="photo/burger-8.jpeg" alt="">
+                    <h4>creamy mushroom</h4>
+                    <p>spicy chicken, cream of mushroom,cheddercheese,grilled onions&tomatos</p>
+                    <div class="price">
+                        <p class="money">$16</p>
+                        <span class="buy">+ add to cart</span>
+                    </div>
+                </div>
+            </div>
+            <h2>dessert menu</h2>
+            <div id="desertID" class="content">
+                <div class="box">
+                    <img src="photo/dessert1.jpg" alt="">
+                    <h4>chocolate mix</h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt, incidunt?</p>
+                    <div class="price">
+                        <p class="money">$4</p>
+                        <span class="buy">+ add to cart</span>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="photo/dessert2.jpg" alt="">
+                    <h4>strawberry mix</h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt, incidunt?</p>
+                    <div class="price">
+                        <p class="money">$8</p>
+                        <span class="buy">+ add to cart</span>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="photo/dessert3.jpg" alt="">
+                    <h4>apple pie</h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt, incidunt?</p>
+                    <div class="price">
+                        <p class="money">$8</p>
+                        <span class="buy">+ add to cart</span>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="photo/dessert4.jpg" alt="">
+                    <h4>sunday waffle</h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt, incidunt?</p>
+                    <div class="price">
+                        <p class="money">$7</p>
+                        <span class="buy">+ add to cart</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="container">
+    <div class="box-social">
+      <h2>crispy</h2>
+      <div class="face">
+        <a href="#" class="facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" class="youtube">
+          <i class="fab fa-youtube"></i>
+        </a>
+      </div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente quidem aliquam voluptatibus facilis autem? Corporis.</p>
+  
+    </div>
+    <div class="box-links">
+      <ul>
+        <li>
+          <a href="#home">
+            home
+          </a>
+        </li>
+        <li>
+          <a href="#about">
+           about
+          </a>
+        </li>
+        <li>
+          <a href="#offers">
+             special offers
+          </a>
+        </li>
+        <li>
+          <a href="#menu">
+           menu
+          </a>
+        </li>
+        <li>
+          <a href="#contact">
+            contact us
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="details">
+      <div class="address">
+        <i class="fas fa-map-marker-alt fa-fw"></i>
+        <p>egypt,kafr-elshikh,qilin</p>
+      </div>
+      <div class="time">
+        <i class="far fa-clock fa-fw"></i>
+        <p>
+          Business Hours: From 10:00 To 18:00</p>
+      </div>
+      <div class="phone">
+        <i class="fas fa-phone-volume fa-fw"></i>
+        <p>+201552267574<br>+201023486547</p>
+      </div>
+    </div>
+    <div class="imgs">
+        <img  src="../photo/insta1.jpg" alt="">
+        <img  src="../photo/insta2.jpg" alt="">
+        <img src="../photo/inta3.jpg" alt="">
+        <img src="../photo/inta4.jpg" alt="">
+        <img src="../photo/Layer-562.png" alt="">
+        <img src="../photo/Layer-692.png" alt="">
+    </div>
+    </div>
+    <h3>made by eng/ kerolos halim</h3>
+  </div>
+</body>
+<script src="../js/products.js"></script>
+</html>

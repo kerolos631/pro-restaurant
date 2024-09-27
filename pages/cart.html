@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cart</title>
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/task.css">
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+        <a href="../index.html">crispy</a>
+        <div class="links">
+          <div class="search">
+              <input type="search" placeholder="search">
+              <a href="products.html"><i class="fas fa-search"></i></a> 
+          </div>
+        <ul>
+            <li>
+                <a href="../index.html">home</a>
+            </li>
+            <li>
+                <a href="../index.html">about</a>
+            </li>
+            <li>
+                <a href="../index.html">offers</a>
+            </li>
+            <li>
+                <a href="../index.html">menu</a>
+            </li>
+            <li>
+                <a href="../index.html">contact</a>
+            </li>
+            <li class="cart">
+                <a href="cart.html">
+                    <i class="fa-sharp-duotone fa-solid fa-cart-shopping"></i></i>
+                </a>
+            </li>
+        </ul>
+        </div>
+        </div>
+        </div>
+        </div>
+        <div class="shop">
+            <div class="main-text">
+                <h2>shop</h2>
+            </div>
+
+            <div class="container">
+                <div class="nav">
+                    <ul>
+                        <li><a href="#" class="active">view cart</a></li>
+                        <li><a href="checkout.html">checkout</a></li>
+                        
+                    </ul>
+                </div>
+                <table id="cartTable">
+                    <thead>
+                        <tr>
+                            <th>product</th>
+                            <th>name</th>
+                            <th>details</th>
+                            <th>price</th>
+                            <th>quantity</th>
+                            <th>subtotal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="image">
+                                <i class="fa-sharp-duotone fa-solid fa-xmark"></i>
+                                <img src="photo/burger1.jpg" alt="">
+                            </td>
+                            <td>juicy burger</td>
+                            <td></td>
+                            <td>8.00$</td>
+                            <td class="num"><input type="number" step="1" value="1"></td>
+                            <td>8.00$</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="totals">
+                    <h3>cart total</h3>
+                    <div class="label">
+                        <p>total</p>
+                        <span id="total">$8.00</span>
+                    </div>
+                    <button><a href="checkout.html">proceed to checkout</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+        <div class="box-social">
+          <h2>crispy</h2>
+          <div class="face">
+            <a href="#" class="facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="youtube">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente quidem aliquam voluptatibus facilis autem? Corporis.</p>
+      
+        </div>
+        <div class="box-links">
+          <ul>
+            <li>
+              <a href="#home">
+                home
+              </a>
+            </li>
+            <li>
+              <a href="#about">
+               about
+              </a>
+            </li>
+            <li>
+              <a href="#offers">
+                 special offers
+              </a>
+            </li>
+            <li>
+              <a href="#menu">
+               menu
+              </a>
+            </li>
+            <li>
+              <a href="#contact">
+                contact us
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="details">
+          <div class="address">
+            <i class="fas fa-map-marker-alt fa-fw"></i>
+            <p>egypt,kafr-elshikh,qilin</p>
+          </div>
+          <div class="time">
+            <i class="far fa-clock fa-fw"></i>
+            <p>
+              Business Hours: From 10:00 To 18:00</p>
+          </div>
+          <div class="phone">
+            <i class="fas fa-phone-volume fa-fw"></i>
+            <p>+201552267574<br>+201023486547</p>
+          </div>
+        </div>
+        <div class="imgs">
+          <img  src="../photo/insta1.jpg" alt="">
+          <img  src="../photo/insta2.jpg" alt="">
+          <img src="../photo/inta3.jpg" alt="">
+          <img src="../photo/inta4.jpg" alt="">
+          <img src="../photo/Layer-562.png" alt="">
+          <img src="../photo/Layer-692.png" alt="">
+        </div>
+        </div>
+        <h3>made by eng/ kerolos halim</h3>
+      </div>
+</body>
+<script src="../js/cart.js"></script>
+</html>

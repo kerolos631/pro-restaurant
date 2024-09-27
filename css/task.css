@@ -1,0 +1,1126 @@
+:root{
+    --main-color:#2196f3;
+    --main-color-alt:#1787e0;
+    --section-background:#ececec;
+    /* --cartNumber:"0"; */
+}
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+body{
+    position: relative;
+    font-family: font-family: "Work Sans", sans-serif;
+}
+
+
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (min-width:768px){
+    .container{
+        width: 750px;
+    }
+}
+@media (min-width:992px) {
+    .container{
+        width:970px;
+    }
+}
+@media (min-width:1200px) {
+    .container{
+        width: 1170px;
+    }
+    
+}
+.fa-angle-up{
+    position: absolute;
+    background-color: white;
+    border: 3px solid rgb(17, 16, 16);
+    padding: 15px;
+    border-radius: 50%;
+    right: 0;
+    bottom: 20px;
+    font-size: 20px;
+    color: var(--main-color);
+    position: fixed;
+    transition: .5s;
+    z-index: 200;
+}
+.fa-angle-up:hover{
+    background-color: red;
+    color: wheat;
+}
+.main-text{
+    border: 2px solid black;
+    padding: 10px 20px;
+    width: fit-content;
+    margin: 20px auto;
+    text-transform: uppercase;
+    border-radius: 5px;
+    position: relative;
+    transition: .5;
+    margin-bottom: 50px;
+    
+}
+.main-text:hover{
+color: white;
+border-color: white;
+}
+.main-text::before, 
+.main-text::after{
+    content: "";
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: cadetblue;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: .5s;
+    z-index: -1;
+    
+}
+.main-text::before{
+    left: -20px;
+}
+.main-text::after{
+    right: -20px;
+}
+.main-text:hover::before{
+   animation: main-text-left .5s linear forwards; 
+}
+.main-text:hover::after{
+    animation: main-text-right .5s linear forwards; 
+ }
+
+.header{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    left: 0;
+   z-index: 100;
+    position: sticky;
+    top: 0;
+    background-color:whitesmoke;
+    box-shadow: 5px 5px 10px #777;
+    
+ 
+    
+}
+.header .container > a{
+    display: block;
+    padding: 10px 0;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: red;
+}
+.header .container .links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header .container ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width:900px) {
+    .header .container .links{
+        flex-direction: column;
+    }
+    
+}
+.header .container ul li{
+    padding: 10px 15px;
+}
+.header .container ul li a{
+text-transform: uppercase;
+color: black;
+transition: .5s;
+
+
+}
+.header .container .links .search input{
+     min-width: 300px;
+    height: 25px;
+    border-radius: 15px;
+    border: #1787e0 solid 1px;
+    padding: 10px;
+}
+.header .container .links .search input:active{
+    outline: none;
+}
+.header .container .links .search i{
+    color: red;
+    margin-right: 20px;
+}
+
+.header .container ul li a:hover{
+    color: red;
+}
+.header .container ul li.cart{
+    position: relative;
+    --cartNumber:"0";
+}
+.header .container ul li.cart:before{
+    content: var(--cartNumber);
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background-color: red;
+    border-radius: 50%;
+    top: -10px;
+    right: 0;
+}
+
+.landing{
+   
+    height: 100vh;
+    background-image: url(../photo/sult.jpeg);
+    position: relative;
+    background-repeat: no-repeat;
+    background-size:cover;
+    
+    
+    
+    
+
+}
+.landing::before{
+content: "";
+position: absolute;
+left: 0;
+height: 100%;
+width: 100%;
+background-color: rgba(0, 0, 0, 0.749);
+}
+.landing .container{
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 100%;
+    overflow: hidden;
+    
+
+
+
+    
+   
+}
+.landing .container h2{
+    
+    font-weight: bolder;
+    text-transform: uppercase;
+    color: #1787e0;
+    letter-spacing: 3px;
+    font-size: 50px;
+    margin-top: 220px;
+
+}
+.landing .container h2 span{
+color: red;
+
+}
+
+.landing .container h1{
+font-size: 50px;
+text-transform: uppercase;
+color: wheat;
+
+}
+.landing .image{
+    position: relative;
+    bottom: -50px ;
+}
+
+.landing .container img{
+    max-width: 500px;
+   
+}
+.landing .icon-arrow-up{
+    color:white;
+    font-size: 30px;
+}
+
+.about{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    position: relative;
+}
+.about .container{
+    display: flex;
+    gap: 30px;
+}
+@media (max-width:767px) {
+    .about .container{
+        flex-direction: column;
+        text-align: center;
+    }
+    
+}
+.about .container .image{
+    width: 100%;
+    max-width: 100%;
+    
+
+}
+.about .container img{
+   
+    border-radius: 25px;
+    width: 100%;
+}
+.about .text h3{
+text-transform: capitalize;
+font-size: 30px;
+padding: 0 20px 20px 0;
+font-weight: bolder;
+line-height: 1.5;
+}
+.about .text p{
+    font-size: 19px;
+    color: #777;
+    line-height: 2;
+    margin-bottom: 20px;
+}
+.over{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    position: relative;
+    background-image: url(../photo/photo-1517248135467-4c7edcad34c4-1.jpg);
+    background-position: bottom center;
+    background-size: cover;
+  min-height: 500px;
+
+}
+.over .over-black{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    opacity: .6;
+    transition:background-color:0.3s, border-radius 0.3s, opacity 0.3s;
+
+
+}
+.over .container{
+    position: relative;
+    color: white;
+    text-align: center;
+    max-width: 500px;
+}
+.over .container h2{
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+.over .container p{
+line-height:2;
+font-size: 20px;
+text-transform: capitalize;
+
+}
+.offers{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    position: relative;
+}
+.offers .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(400px,1fr));
+    gap: 30px;
+}
+.offers .container .box-one{
+    box-shadow: 5px 10px 10px #777;
+    padding: 20px 20px;
+}
+.offers .container .box-one > span{
+  
+    background-color: red;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-variant: small-caps;
+    padding: 5px 10px;
+    color: white;
+    display: inline-block;
+}
+.offers .container .box-one img{
+    margin-top: 20px;
+    max-width: 100%;
+}
+.offers .container .box-one h4{
+    text-transform: capitalize;
+    padding: 10px 0;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+.offers .container .box-one .details{
+    display: flex;
+    margin-bottom: 20px;
+    
+
+}
+.offers .container .box-one .details p{
+    padding: 10px ;
+    border-radius: 25px;
+    background-color: #ecececca;
+    margin-right: 15px;
+    width: 100px;
+    text-align: center;
+    
+}
+.offers .container .box-one> p{
+    font-size: 17px;
+    color: #777;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+ .price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+
+}
+.money{
+    padding: 15px 0;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 25px;
+    background: orangered;
+    width: 100px;
+    text-align: center;
+    color: white;
+}
+.buy{
+    text-transform: capitalize;
+    font-weight: bold;
+    transition: .5s;
+    cursor: pointer;
+}
+.buy:hover{
+    color: orangered;
+}
+.offers .box-two{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    gap: 30px;
+
+}
+.offers .box-two .content{
+    box-shadow: 5px 10px 10px #777;
+    padding: 20px 20px;
+    text-align: center;
+}
+.offers .box-two .content img{
+    margin-bottom: 15px;
+}
+.offers .box-two .content p{
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    font-weight: 900;
+    font-size: 19px;
+}
+.offers .box-two .content .money{
+    text-transform: capitalize;
+    font-weight: bold;
+    transition: .5s;
+    cursor: pointer;
+    margin: 0 auto 15px;
+}
+.before-menu{
+    background-color: black;
+    display: flex;
+  
+    gap: 30px;
+    color: white;
+}
+.before-menu img{
+    width: 50%;
+    max-width: 100%;
+}
+@media (max-width:767px){
+    .before-menu img{
+        display: none;
+    }
+}
+.before-menu .text{
+padding-top: 100px;
+padding-left: 50px;
+max-width: 500px;
+}
+.before-menu .text span{
+    background-color: red;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-variant: small-caps;
+    padding: 5px 10px;
+    color: white;
+    display: inline-block;
+    text-transform: uppercase;
+}
+.before-menu .text h2{
+    margin-bottom: 35px;
+    line-height: 1.8;
+    font-size: 35px;
+    text-transform: capitalize;
+
+}
+.before-menu .text p{
+    font-size: 19px;
+    font-variant: small-caps;
+    margin-bottom: 35px;
+}
+.before-menu .text button{
+    padding: 10px 15px;
+    background-color: transparent;
+    color: white;
+    font-size: 20px;
+    border: 3px solid wheat;
+    border-radius: 25px;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: .5s;
+    margin-top: 20px;
+}
+.before-menu .text button a{
+    color: wheat;
+}
+.before-menu .text button:hover{
+    background-color: orangered;
+    border: none;
+}
+.menu{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    position: relative;
+}
+.menu .container h2{
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 35px;
+    padding: 30px 0;
+}
+.menu .container .content{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(255px, 1fr));
+    gap: 40px;
+}
+.menu .container .content .box{
+     box-shadow: 5px 5px 10px #777;
+     padding: 20px;
+     position: relative;
+     transition: .5s;
+
+}
+.menu .container .content .box::before,
+.menu .container .content .box::after{
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 0;
+    background-color: orangered;
+    transition: .5s;
+ 
+
+}
+.menu .container .content .box::before{
+    left: 0;
+    top: 0;
+}
+.menu .container .content .box::after{
+    right: 0;
+    bottom: 0;
+}
+.menu .container .content .box:hover::after,
+.menu .container .content .box:hover::before{
+    height: 100%;
+}
+
+
+.menu .container .content .box img{
+    width: 100%;
+    max-width: 100%;
+    border-radius: 25px;
+}
+
+
+.menu .container .content .box h4{
+    padding: 10px 0;
+    text-transform: capitalize;
+    font-size: 25px;
+
+}
+.menu .container .content .box p{
+    line-height: 1.5;
+    color: #777;
+    text-transform: capitalize;
+    padding-bottom: 50px;
+
+}
+.menu .container .content .box .price{
+    position: absolute;
+    bottom: 10px;
+}
+.menu .container .content .box .price .money{
+color: white;
+padding: 5px;
+margin-right: 20px;
+}
+
+.contact{
+    position: relative;
+    display: flex;
+}
+@media (max-width:990px) {
+    .contact{
+        flex-direction: column;
+    }
+    
+}
+.contact .box{
+   
+   text-align: center;
+
+   width: 50%;
+   height: 100vh;
+   position: relative;
+    
+}
+@media (max-width:990px) {
+    .contact .box{
+        width: 100%;
+    }
+    
+}
+
+
+.contact .box img{
+    width: 80%;
+    max-width: 100%;
+    border-radius: 25%;
+}
+.contact .box-form{
+  
+    text-align: center;
+    margin: 100px auto 0;
+}
+
+
+
+.contact .box-form form{
+ display: flex;
+ flex-direction: column;
+
+ 
+
+}
+.contact .box-form form h2{
+    margin-bottom: 30px;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 35px;
+    color: black;
+}
+.contact .box-form form input{
+padding: 10px;
+border: none;
+background-color: #7777771c;
+margin-bottom: 25px;
+border-bottom: 1px solid #777;
+}
+.contact .box-form form textarea{
+    padding: 10px;
+border: none;
+background-color: #7777771c;
+margin-bottom: 25px;
+border-bottom: 1px solid #777;
+height: 200px;
+resize: none;
+}
+.contact .box-form form input[type="submit"]{
+    color: white;
+    text-transform: capitalize;
+    font-size: 19px;
+    background-color: #1787e0;
+    cursor: pointer;
+}
+.contact .box-form form input[type="submit"]:hover{
+    opacity: .7;
+}
+
+
+
+
+
+
+
+@media (max-width:767px) {
+    .about .container .image{
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    
+}
+.footer{
+    color: wheat;
+    background-color: black;
+    padding-top: 50px;
+   
+    position: relative;
+}
+.footer .container{
+display: grid;
+grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+gap: 30px;
+padding-bottom: 50px;
+}
+@media (max-width:767px) {
+    .footer .box-social{
+        text-align: center;
+
+    }
+    
+}
+.footer .box-social h2{
+   font-size: 40px;
+   text-transform: capitalize;
+   margin-bottom: 15px;
+}
+.footer .box-social .face{
+    display: flex;
+    margin-bottom: 15px;
+    
+}
+@media (max-width:767px) {
+    .footer .box-social .face{
+       justify-content: center;
+
+    }
+    
+}
+.footer .box-social .face a{
+    padding: 15px;
+    margin-right: 8px;
+    width: 50px;
+   background-color: #555;
+}
+.footer .box-social .face a i{
+   color: white;
+   font-size: 18px;
+   
+}
+.footer .box-social p{
+    line-height: 1.6;
+    font-size: 17px;
+}
+.footer .box-social .face .facebook,
+.footer .box-social .face .twitter,
+.footer .box-social .face .youtube{
+    transition: .5s;
+}
+.footer .box-social .face .facebook:hover {
+    background-color: rgba(0, 81, 255, 0.372);
+}
+.footer .box-social .face .twitter:hover {
+    background-color: rgb(0, 81, 255);
+}
+.footer .box-social .face .youtube:hover {
+    background-color: rgb(175, 52, 12);
+}
+
+@media (max-width:767px) {
+    .footer .box-links ul{
+        text-align: center;
+    }
+    
+}
+.footer .box-links ul li{
+    text-transform: capitalize;
+    padding: 10px 0;
+   
+}
+.footer .box-links ul li:not(:last-child){
+    border-bottom: 1px solid rgba(255, 255, 255, 0.461);
+}
+.footer .box-links ul li a{
+    color: white;
+    transition: .5s;
+    opacity: .7;
+    
+    
+}
+.footer .box-links ul li a:hover{
+    padding-left: 15px;
+    opacity: 1;
+}
+
+
+
+.footer .details > div{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+.footer .details > div > p{
+    text-transform: capitalize;
+    line-height: 1.5;
+}
+.footer .details > div >i{
+    font-size: 20px;
+}
+.footer .details .phone p{
+    letter-spacing: 1.5px;
+}
+.footer .imgs{
+width: 100%;
+max-width: 100%;
+
+}
+.footer .imgs img{
+    width: 75px;
+    padding: 5px;
+background-color: white;
+margin: 2px;
+}
+.footer > h3{
+padding: 20px ;
+letter-spacing: 1.5;
+text-align: center;
+text-transform: uppercase;
+border-top: #555 solid 2px;
+
+
+
+}
+
+@keyframes main-text-left {
+    0%,50%{
+        left: 0;
+        height: 15px;
+        width: 15px;
+    }
+    100%{
+        left: 0;
+        height: 100%;
+        width: 100%;
+        border-radius: none;
+    }
+}
+@keyframes main-text-right {
+    0%,50%{
+        right: 0;
+        height: 15px;
+        width: 15px;
+        
+    }
+    100%{
+        right: 0;
+        height: 100%;
+        width: 100%;
+        border-radius: 0;
+    }
+}
+/* cart-site */
+.shop{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    position: relative;
+}
+.shop .nav ul{
+    display: flex;
+    width: 100%;
+    text-align: center;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    background-color: rgba(255, 68, 0, 0.324);
+
+}
+.shop .nav ul li{
+    flex-basis: 50%;
+}
+.shop .nav ul li a{
+    display: block;
+    color: rgb(255, 255, 255);
+    font-size: 19px;
+    font-weight: 900;
+    text-transform: capitalize;
+    padding: 15PX;
+    border-radius: 15px;
+    transition: .5s;
+
+   
+}
+.shop .nav ul li a:hover{
+    background-color: orangered;
+}
+.shop .nav ul li a.active{
+    background-color: orangered;
+
+}
+.shop table{
+    text-align: center;
+    text-transform: capitalize;
+
+    width: 100%;
+}
+.shop table thead th{
+    font-size: 18px;
+    padding: 10px 20px;
+    margin-right: 20px;
+    border: 1px solid #77777728;
+}
+.shop table tbody .image {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+.shop table tbody .image img{
+    width: 150px;
+
+   
+}
+.shop table tbody .image i{
+    font-size: 20px;
+    opacity: .5;
+    cursor: pointer;
+    transition: .5s;
+}
+.shop table tbody .image i:hover{
+    color: red;
+    opacity: 1;
+}
+.shop table tbody td{
+    font-size: 18px;
+    border: 1px solid #77777728;
+}
+.shop table tbody td input{
+width: 80px;
+border: none;
+text-align: center;
+}
+ .shop .totals{
+    padding-top: 50px;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    width: 100%;
+
+    
+    
+}
+.shop .totals h3{
+    text-transform: capitalize;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 30px;
+
+}
+.shop .totals .label{
+    background-color: #7777771c;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+
+}
+.shop .totals .label p{
+    font-size: 20px;
+    padding-right: 50px;
+    margin-right: 100px;
+    text-transform: capitalize;
+}
+.shop .totals .label span{
+    margin-left: 100px;
+    font-size: 20px;
+}
+
+.shop .totals button a{
+    display: block;
+    color: black;
+    padding: 10px 20px;
+    text-transform: capitalize;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.shop .totals button a:hover{
+    background-color: orangered;
+    color: white;
+
+}
+/*checkout*/
+.shop .container .content{
+    display: grid;
+    grid-template-columns:repeat(auto-fill,minmax(500px,1fr));
+    gap: 30px;
+}
+.shop .container .content .billing-details form{
+    text-transform: capitalize;
+    font-weight: 700;
+}
+.shop .container .content .billing-details form .name{
+    display: flex;
+    justify-content: space-between;
+}
+.shop .container .content .billing-details form label.required{
+    color: rgba(255, 0, 0, 0.728);
+}
+.shop .container .content .billing-details form input{
+width: 100%;
+height: 35px;
+margin: 10px 0;
+padding-left: 20px;
+}
+.shop .container .content .billing-details form select{
+
+height: 35px;
+margin: 10px 0;
+}
+.shop .container .content .billing-details form textarea{
+    width: 100%;
+    height: 150px;
+    margin-top: 10px;
+    resize: none;
+    padding: 10px;
+}
+
+::placeholder{
+    
+    text-transform: capitalize;
+}
+.shop .container .box{
+    box-shadow: 0 5px 5px #888;
+    text-align: center;
+    padding-top: 15px;
+}
+.shop .container .box .order h3{
+    text-transform: capitalize;
+    padding: 15px 15px;
+    font-size: 20px;
+    text-align: left;
+
+}
+.shop .container .box .order .product
+, .shop .container .box .order .label{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #7777771b;
+    margin-bottom: 15px;
+}
+.shop .container .box .order .product img{
+    width: 80px;
+    border-radius: 50%;
+}
+.shop .container .box .order .label{
+    padding: 20px 0;
+    text-transform: capitalize;
+    font-size: 19px;
+}
+.shop .container .box .visa form{
+text-align: left;
+padding: 10px 20px;
+}
+.shop .container .box .visa form .radio{
+    margin-bottom: 15px;
+    padding: 15px;
+}
+.shop .container .box .visa form label{
+    margin-left: 10px;
+    text-transform: capitalize;
+    font-size: 18px;
+
+   
+}
+
+.shop .container .box .visa form img{
+    margin-left: 10px;
+} 
+
+.shop .container .box .visa form button{
+    padding: 10px 15px;
+    text-transform: capitalize;
+    font-size: 20px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: .5s;
+
+}
+.shop .container .box .visa form button:hover{
+    color: white;
+    background-color: orangered;
+    border: none;
+}
+.page{
+    display: flex;
+}
+.filter{
+    padding: 15px;
+    
+    width: 250px;
+    background-color: #77777714;
+    position: relative;
+    left: 0;
+    top: 0;
+    text-transform: capitalize;
+}
+.filter h3{
+   font-weight: 800;
+   font-size: 25px;
+    padding: 10px 0;
+}
+.filter ul h4{
+    font-size: 20px;
+    padding: 10px 0;
+    color: var(--main-color);
+}
+.filter ul  input{
+    margin-bottom: 15px;
+    
+
+}
+.filter button{
+    padding: 5px ;
+    width: 50px;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+.page .menu{
+    padding-top: 0;
+   
+}
+
+
+
+
